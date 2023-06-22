@@ -1,0 +1,153 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+html {
+    height: 100%;
+
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 50%;
+}
+
+
+/*UsersForm Component*/
+.users_container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.users_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.users_wrapper {
+    padding: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.input_users {
+    flex: 1;
+    min-width: 40%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.users_btn {
+    width: 100%;
+    border: none;
+    padding: 15px 20px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.--flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*User Component*/
+
+.user{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #eee;
+    padding: 10px;
+    margin: 7px 0;
+    animation: slide-in ease 0.5s;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(40px);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.user::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color:red;
+}
+
+.completed {
+    position: relative;
+}
+
+.completed::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color:green;
+}
+
+.user_icons {
+    font-size: 1.3rem;
+}
+
+.user_icons > * {
+    margin-left: 7px;
+    cursor: pointer;
+}
+/*User Component*/
